@@ -1,0 +1,19 @@
+---
+env: dev
+
+global:
+  appname: example-app
+  backend:
+    name: example-backend
+    port: 8080
+  labels:
+    - key: helm.sh/chart
+      value: '{{ $.Chart.Name }}-{{ $.Chart.Version | replace "+" "_" }}'
+    - key: app.kubernetes.io/managed-by
+      value: "{{ $.Release.Service }}"
+    - key: app.kubernetes.io/instance
+      value: "{{ $.Release.Name }}"
+    - key: app.kubernetes.io/version
+      value: "{{ $.Chart.AppVersion }}"
+  cluster:
+    baseDomain: apps.cluster-99df.99df.sandbox1911.opentlc.com

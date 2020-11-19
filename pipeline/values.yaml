@@ -1,0 +1,5 @@
+---
+global:
+  backend:
+    name: example-backend
+    port: 8080
