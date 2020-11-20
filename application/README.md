@@ -4,32 +4,23 @@
 * Opensshift Piplelines(tekton)
 
 
-## Example Frontend/Backend deployment
+## Deployment
 
-Creates a DeploymentConfig, Service, and ImageStream for a frontend and backend application. Sets up a PostgresDB. And Puts the services behind an OAuth proxy using Keycloak as a security realm.
-
-Also sets up a Tekton pipeline
-
-#### Update Helm Dependencies
+#### Update Helm Dependencies (Must be run every time the pipeline is updated)
 
 ```
 helm dependency update
 ```
 
-#### Install Helm Chart
+#### Install Helm Chart (First time installation)
 
 ```
-helm install postgres/postgres-chart --name-template <TEMPLATE_NAME>
+helm install <RELEASE_NAME> . 
 ```
 
-### Update Helm Chart to newer version
+### Update Existing Helm Chart
 
-Update `appVersion` in the `Chart.yaml` file
 
 ```
 helm upgrade <TEMPLATE_NAME> .
 ```
-
-### 
-
-Start Pipeline 

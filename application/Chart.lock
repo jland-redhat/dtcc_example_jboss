@@ -1,6 +1,6 @@
 dependencies:
 - name: pipeline
   repository: file://../pipeline
-  version: 2.1.0
-digest: sha256:14f986388892c6d6b3effa52d1e69ba40ea3d892722acc611b5eabf6878cb6ab
-generated: "2020-11-19T16:48:29.476241249-05:00"
+  version: 2.1.1
+digest: sha256:52921746f9ba5b86eb9f327f7e08fa7e7efedaeb84b1050aadc20451a8b94bfd
+generated: "2020-11-20T10:03:55.558719096-05:00"
